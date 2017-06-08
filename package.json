@@ -1,0 +1,22 @@
+{
+  "name": "node-webscrape-mongo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "hbs": "~4.0.1",
+    "mongoose": "^4.10.5",
+    "morgan": "~1.8.1",
+    "request": "^2.81.0",
+    "serve-favicon": "~2.4.2"
+  }
+}
