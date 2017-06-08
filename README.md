@@ -1,5 +1,5 @@
 # Week 18 Homework Assignment - All the News That's Fit to Scrape
-# Flexing my Mongoose and Cheerio muscles to scrape news from another site
+# Flexing my Mongoose and Cheerio muscles by scraping news from another site
 
 ### Overview
 
