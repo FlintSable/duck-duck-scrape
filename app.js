@@ -8,11 +8,13 @@ var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var user = require('./routes/user');
+var test = require('./routes/test');
+
 
 var app = express();
 
-mongoose.connect('localhost:27017/scrapeCentral');
+mongoose.connect('localhost:27017/duckuckScrape');
 // require('./config/passport');
 
 // view engine setup
