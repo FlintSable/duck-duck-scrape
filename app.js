@@ -8,8 +8,10 @@ var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var user = require('./routes/user');
+// var user = require('./routes/user');
 var api = require('./routes/api');
+var duck = require('./routes/duck');
+
 
 
 var app = express();
@@ -29,7 +31,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/users', users);
+// app.use('/users', users);
+app.use('/duck', duck);
 app.use('/api', api);
 app.use('/', index);
 
