@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var NoteSchema = new Schema9{
+var NoteSchema = new Schema({
 	title: {
 		type: String
 	}, 
@@ -12,4 +12,4 @@ var NoteSchema = new Schema9{
 
 var Note = mongoose.model('Note', NoteSchema);
 
-module.exports = Note;k
+module.exports = Note;

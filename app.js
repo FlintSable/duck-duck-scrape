@@ -7,20 +7,14 @@ var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
 var mongoose = require('mongoose');
 
-var index = require('./routes/index');
-// var user = require('./routes/user');
-var api = require('./routes/api');
-var duck = require('./routes/duck');
-
-
+var index = require('./controllers/controller.js');
 
 var app = express();
 
-mongoose.connect('localhost:27017/duckuckScrape');
-// require('./config/passport');
+mongoose.connect('127.0.0.1:27017/duckuckScrape');
 
 // view engine setup
-app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}))
+app.engine('.hbs', expressHbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
 // uncomment after placing your favicon in /public
@@ -31,9 +25,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/users', users);
-app.use('/duck', duck);
-app.use('/api', api);
 app.use('/', index);
 
 // catch 404 and forward to error handler
