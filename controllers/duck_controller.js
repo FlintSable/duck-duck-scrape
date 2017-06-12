@@ -1,1 +1,0 @@
-// controllers typically require the models that they will interact with
