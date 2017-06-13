@@ -6,11 +6,11 @@ In this assignment I have create a web app that lets users leave comments on the
 
 ## Application Overview
 
-  1. Whenever a user visits your site, the app will scrape stories from a news outlet. The data should at least include a link to the story and a headline, but feel free to add more content to your database (photos, bylines, and so on).
-  2. Use Cheerio to grab the site content and Mongoose to save it to your MongoDB database. 
+  1. Whenever a user visits your site, the app will scrape stories from animenewsnetwork. The data includes a title and the link to the story.
+  2. Using Cheerio the script grabs the site content and uses Mongoose to save it to your MongoDB database. 
 
-  3. All users can leave comments on the stories you collect. They should also be allowed to delete whatever comments they want removed. All stored comments should be visible to every user.
-  4. You'll need to use Mongoose's model system to associate comments with particular articles. 
+  3. All users can leave comments on the stories the app collects. Users are also allowed to delete whatever comments they want removed. All stored comments should be visible to every user.
+  4. I have used the Mongoose's model system to associate comments with particular articles. 
 
 ### One Last Thing
 
