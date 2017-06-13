@@ -13,13 +13,14 @@ router.get('/', function(req, res) {
 });
 
 router.get('/home', function(req, res) {
-    var url = 'http://www.echojs.com/';
+    // var url = 'http://www.echojs.com/';
+    let url = 'https://www.animenewsnetwork.com/';
     request(url, function(error, response, html) {
         var $ = cheerio.load(html);
-        $('article h2').each(function(i, element) {
+        $('div.wrap').each(function(i, element) {
             var result = {};
-            result.title = $(this).children('a').text();
-            result.link = $(this).children('a').attr('href');
+            result.title = $(this).find('> div > h3 > a > cite').text();
+            result.link = url + $(this).find('> div > h3 > a').attr('href');
             var entry = new Article(result);
             entry.save(function(err, doc) {
                 if (err) {
