@@ -1,13 +1,19 @@
- body{
-    /*background-color: #DECADE*/
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: #F2F6D0
- }
- #wrapper{
+}
+
+a {
+  color: #00B7FF;
+}
+
+#wrapper{
     width:960px;
     margin: 0 auto;
     padding-top: 5%;
  }
- #articles{
+#articles{
     width:60%;
     height:700px;
     display:inline-block;
