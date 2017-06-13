@@ -13,16 +13,6 @@ router.get('/', function(req, res) {
 });
 
 router.get('/home', function(req, res) {
-<<<<<<< HEAD
-    // var url = 'http://www.echojs.com/';
-    let url = 'https://www.animenewsnetwork.com/';
-    request(url, function(error, response, html) {
-        var $ = cheerio.load(html);
-        $('div.wrap').each(function(i, element) {
-            var result = {};
-            result.title = $(this).find('> div > h3 > a > cite').text();
-            result.link = url + $(this).find('> div > h3 > a').attr('href');
-=======
     var url = 'http://www.echojs.com/';
     request(url, function(error, response, html) {
         var $ = cheerio.load(html);
@@ -30,7 +20,6 @@ router.get('/home', function(req, res) {
             var result = {};
             result.title = $(this).children('a').text();
             result.link = $(this).children('a').attr('href');
->>>>>>> 958183b4b606637393ad268e16c8802e7a2a08f8
             var entry = new Article(result);
             entry.save(function(err, doc) {
                 if (err) {
