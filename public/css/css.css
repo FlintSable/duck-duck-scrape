@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -9,11 +10,22 @@ a {
 }
 
 #wrapper{
+=======
+ body{
+    /*background-color: #DECADE*/
+    background-color: #F2F6D0
+ }
+ #wrapper{
+>>>>>>> 958183b4b606637393ad268e16c8802e7a2a08f8
     width:960px;
     margin: 0 auto;
     padding-top: 5%;
  }
+<<<<<<< HEAD
 #articles{
+=======
+ #articles{
+>>>>>>> 958183b4b606637393ad268e16c8802e7a2a08f8
     width:60%;
     height:700px;
     display:inline-block;
