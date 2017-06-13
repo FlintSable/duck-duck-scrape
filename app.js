@@ -11,7 +11,16 @@ var index = require('./controllers/controller.js');
 
 var app = express();
 
-mongoose.connect('127.0.0.1:27017/duckuckScrape');
+var duckduckScrape = '127.0.0.1:27017/duckuckScrape';
+
+if(process.env.MONGODB_URI){
+	console.log("Heroku MONGODB URI" + process.env.MONGODB_URI);
+	mongoose.connect(process.env.MONGODB_URI);
+} else {
+	mongoose.connect(duckduckScrape);
+}
+
+const db = mongoose.connection;
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'main', extname: '.hbs'}));
@@ -26,6 +35,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+
+
+// mongo connection methods
+db.on('error', function(err){
+	console.log('Database Error: ', err);
+});
+
+db.once('open', function(){
+	console.log('connected: ' + duckduckScrape);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
